@@ -1,6 +1,7 @@
 // Напишите функцию, которая принимает
 // число и выводит количество цифр в этом
 // числе
+import {isNum} from '../CommonValidation.js'
 
 function getAmountOfDigitsIn(num) {
   if (isNum(num)) {
@@ -17,18 +18,6 @@ function getAmountOfDigitsIn(num) {
     }
     return str.length;
   } else console.log("Can't count");
-}
-
-function isNum(value) {
-  if (
-    (!Number.isNaN(value) &&
-      typeof value === "number" &&
-      Number.isFinite(value)) ||
-    typeof value === "bigint"
-  ) {
-    return true;
-  }
-  return false;
 }
 
 console.log(getAmountOfDigitsIn(1111111111)); //10
