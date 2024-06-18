@@ -16,10 +16,7 @@ function getSumOfArrElementsInRangeOf(arr, greatThan = 0, lessThan = 10) {
 }
 
 function isArrayNumeric(arr) {
-  if(arr.find(e=>!isNum(e))){
-    return false;
-  }
-  return true;
+  return !arr.find(e=>!isNum(e));
 }
 
 let checkArr = Array.from(
