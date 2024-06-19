@@ -51,3 +51,10 @@ export function isCurrency(value) {
   }
   return false;
 }
+
+export function areIntIntervalBorders(from=1,to=10){
+  if(!isIntNum(from)||!isIntNum(to)){
+    return false;
+  }
+  return true;
+}
